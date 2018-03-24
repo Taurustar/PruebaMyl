@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Question 1: Add
+/// </summary>
 public class RandomQuestion : MonoBehaviour {
 
-    GameObject[] Questions;
-    GameObject[] texts;
-    int currentText;
-    int currentQuestion;
+    public GameObject[] Questions;
+    public GameObject[] texts;
+    public int currentText;
+    public int currentQuestion;
 
     void Start()
     {
@@ -17,22 +20,33 @@ public class RandomQuestion : MonoBehaviour {
         texts[currentText].SetActive(true);
     }
 
-
-    void QuestionChange()
+    void Update()
     {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            TextChange();
+        }
+    }
+
+    void TextChange()
+    {
+        texts[currentText].GetComponent<Canvas>().enabled = false;
         currentText++;
-        if(currentText >= texts.Length - 1)
+        if(currentText > texts.Length - 1)
         {
             currentText = texts.Length - 1;
             StartCoroutine(GoToQuestion());
         }
+         texts[currentText].GetComponent<Canvas>().enabled = true;
     }
 
     IEnumerator GoToQuestion()
     {
-        Questions[currentQuestion].SetActive(false);
+        
+        Questions[currentQuestion].GetComponent<Canvas>().enabled = false;
         yield return new WaitForEndOfFrame();
         currentQuestion = Random.Range(0, Questions.Length - 1);
-        Questions[currentQuestion].SetActive(true);
+        Questions[currentQuestion].GetComponent<Canvas>().enabled = true;
+        texts[currentText].GetComponent<Canvas>().enabled = false;
     }
 }

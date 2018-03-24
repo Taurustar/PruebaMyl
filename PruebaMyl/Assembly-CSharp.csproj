@@ -51,6 +51,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Question1.cs" />
+     <Compile Include="Assets\Question10.cs" />
+     <Compile Include="Assets\Question2.cs" />
+     <Compile Include="Assets\Question3.cs" />
+     <Compile Include="Assets\Question4.cs" />
+     <Compile Include="Assets\Question5.cs" />
+     <Compile Include="Assets\Question6.cs" />
+     <Compile Include="Assets\Question7.cs" />
+     <Compile Include="Assets\Question8.cs" />
+     <Compile Include="Assets\Question9.cs" />
      <Compile Include="Assets\Scripts\MenuPrincipal.cs" />
      <Compile Include="Assets\Scripts\Scene1Scripts\RandomQuestion.cs" />
      <Compile Include="Assets\Scripts\SceneAsyncLoader.cs" />
