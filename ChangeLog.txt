@@ -1,2 +1,11 @@
 23/03/2018 - 22:43
 -Se inicia el proyecto
+
+24/03/2018 - 4:00
+-Se finaliza primer día
+-Se inicia la escena principal y la escena 1
+-Se importan algunos assets para trabajar
+-Se organizan algunas de las carpetas del proyecto
+
+24/03/2018 - 10:41
+-Se inicia segundo Dia
