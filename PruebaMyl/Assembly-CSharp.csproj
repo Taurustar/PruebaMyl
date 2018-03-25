@@ -51,19 +51,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Question1.cs" />
-     <Compile Include="Assets\Question10.cs" />
-     <Compile Include="Assets\Question2.cs" />
-     <Compile Include="Assets\Question3.cs" />
-     <Compile Include="Assets\Question4.cs" />
-     <Compile Include="Assets\Question5.cs" />
-     <Compile Include="Assets\Question6.cs" />
-     <Compile Include="Assets\Question7.cs" />
-     <Compile Include="Assets\Question8.cs" />
-     <Compile Include="Assets\Question9.cs" />
      <Compile Include="Assets\Scripts\MenuPrincipal.cs" />
+     <Compile Include="Assets\Scripts\Scene1Scripts\Question1.cs" />
+     <Compile Include="Assets\Scripts\Scene1Scripts\Question10.cs" />
+     <Compile Include="Assets\Scripts\Scene1Scripts\Question2.cs" />
+     <Compile Include="Assets\Scripts\Scene1Scripts\Question3.cs" />
+     <Compile Include="Assets\Scripts\Scene1Scripts\Question4.cs" />
+     <Compile Include="Assets\Scripts\Scene1Scripts\Question5.cs" />
+     <Compile Include="Assets\Scripts\Scene1Scripts\Question6.cs" />
+     <Compile Include="Assets\Scripts\Scene1Scripts\Question7.cs" />
+     <Compile Include="Assets\Scripts\Scene1Scripts\Question8.cs" />
+     <Compile Include="Assets\Scripts\Scene1Scripts\Question9.cs" />
      <Compile Include="Assets\Scripts\Scene1Scripts\RandomQuestion.cs" />
      <Compile Include="Assets\Scripts\SceneAsyncLoader.cs" />
+     <Compile Include="Assets\TestLevel\scripts\breakablelight.cs" />
+     <Compile Include="Assets\TestLevel\scripts\crate.cs" />
+     <Compile Include="Assets\TestLevel\scripts\explosionForce.cs" />
+     <Compile Include="Assets\TestLevel\scripts\explosive.cs" />
+     <Compile Include="Assets\TestLevel\scripts\ImpactAudio.cs" />
+     <Compile Include="Assets\TestLevel\scripts\Lightflicker.cs" />
+     <Compile Include="Assets\TestLevel\scripts\playrandomsound.cs" />
+     <Compile Include="Assets\TestLevel\scripts\waitAndDestroy.cs" />
+     <Compile Include="Assets\VehicleSwapper.cs" />
+     <None Include="Assets\skyshader1.0\mysky.shader" />
+     <None Include="Assets\TestLevel\environment\customTrees\Materials\TreeCreatorLeavesFastOptimized.shader" />
+     <None Include="Assets\TestLevel\shaders\snowTop.shader" />
  <Reference Include="Vuforia.UnityExtensions.Editor">
  <HintPath>A:/Unity/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Editor/Vuforia.UnityExtensions.Editor.dll</HintPath>
  </Reference>
