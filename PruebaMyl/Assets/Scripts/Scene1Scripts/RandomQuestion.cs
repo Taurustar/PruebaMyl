@@ -12,6 +12,7 @@ public class RandomQuestion : MonoBehaviour {
     public GameObject[] texts;
     public int currentText;
     public int currentQuestion;
+    public GameObject ButtonToStart;
 
     void Start()
     {
@@ -22,13 +23,10 @@ public class RandomQuestion : MonoBehaviour {
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            TextChange();
-        }
+
     }
 
-    void TextChange()
+    public void TextChange()
     {
         texts[currentText].GetComponent<Canvas>().enabled = false;
         currentText++;
@@ -48,5 +46,7 @@ public class RandomQuestion : MonoBehaviour {
         currentQuestion = Random.Range(0, Questions.Length - 1);
         Questions[currentQuestion].GetComponent<Canvas>().enabled = true;
         texts[currentText].GetComponent<Canvas>().enabled = false;
+        //ButtonToStart.GetComponent<Button>().enabled = false;
+        ButtonToStart.GetComponent<Image>().raycastTarget = false;
     }
 }

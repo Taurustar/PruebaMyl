@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Question9 : MonoBehaviour {
 
-
+    public RandomQuestion QuestionManager;
     public GameObject questionLabel;
     public GameObject resultBox;
     public GameObject correct;
@@ -14,7 +14,9 @@ public class Question9 : MonoBehaviour {
     string[] word = { "Short Message System", "Girlfriend" , "Facebook", "Mitos y Leyendas", "Laughing out loud" , "Frequently Asked questions" };
     int index;
     string response;
-
+    public Material wrongMat, correctMat, confusedMat, normalMat;
+    public Color wrongColor = Color.yellow, correctColor = Color.green, confusedColor = Color.blue;
+    public GameObject RobotEye, RobotLight, RobotBody;
 
     // Use this for initialization
     void Start()
@@ -25,6 +27,7 @@ public class Question9 : MonoBehaviour {
 
     public void CheckResult()
     {
+        RobotLight.GetComponent<Light>().enabled = true;
         if (!resultBox.GetComponent<InputField>().text.Contains("1") &&
             !resultBox.GetComponent<InputField>().text.Contains("2") &&
             !resultBox.GetComponent<InputField>().text.Contains("3") &&
@@ -49,18 +52,54 @@ public class Question9 : MonoBehaviour {
             if (resultBox.GetComponent<InputField>().text.Equals(response,System.StringComparison.CurrentCultureIgnoreCase))
             {
                 correct.SetActive(true);
-                //TODO: LightChange
+                RobotEye.GetComponent<MeshRenderer>().material = correctMat;
+                RobotLight.GetComponent<Light>().color = correctColor;
+                StartCoroutine(OtherQuestion());
+                RobotBody.GetComponent<Animation>().clip = RobotBody.GetComponent<Animation>().GetClip("Good");
+                RobotBody.GetComponent<Animation>().Play();
             }
             else
             {
                 wrong.SetActive(true);
-                //TODO: LightChange
+                RobotEye.GetComponent<MeshRenderer>().material = wrongMat;
+                RobotLight.GetComponent<Light>().color = wrongColor;
+                StartCoroutine(OtherQuestion());
+                RobotBody.GetComponent<Animation>().clip = RobotBody.GetComponent<Animation>().GetClip("Wrong");
+                RobotBody.GetComponent<Animation>().Play();
             }
         }
         else
         {
             confused.SetActive(true);
-            //TODO: LightChange
+            RobotEye.GetComponent<MeshRenderer>().material = confusedMat;
+            RobotLight.GetComponent<Light>().color = confusedColor;
+            StartCoroutine(QuestionAgain());
+            RobotBody.GetComponent<Animation>().clip = RobotBody.GetComponent<Animation>().GetClip("Confused");
+            RobotBody.GetComponent<Animation>().Play();
         }
+    }
+
+    IEnumerator QuestionAgain()
+    {
+        yield return new WaitForSeconds(3);
+        confused.SetActive(false);
+        RobotLight.GetComponent<Light>().enabled = false;
+        RobotEye.GetComponent<MeshRenderer>().material = normalMat;
+        
+        RobotBody.GetComponent<Animation>().Stop();
+    }
+
+    IEnumerator OtherQuestion()
+    {
+        yield return new WaitForSeconds(3);
+        confused.SetActive(false);
+        wrong.SetActive(false);
+        correct.SetActive(false);
+        RobotLight.GetComponent<Light>().enabled = false;
+        RobotEye.GetComponent<MeshRenderer>().material = normalMat;
+        QuestionManager.TextChange();
+        resultBox.GetComponent<InputField>().text = "";
+        RobotBody.GetComponent<Animation>().Stop();
+        Start();
     }
 }

@@ -1083,6 +1083,11 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &104945031 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1415000795296964, guid: 74c22cd241851e64e90ca5ba3fa984b9,
+    type: 2}
+  m_PrefabInternal: {fileID: 2130904024}
 --- !u!1 &105063247
 GameObject:
   m_ObjectHideFlags: 0
@@ -1887,9 +1892,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b2ee06972e9ad4a895281354a52a6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  QuestionManager: {fileID: 798983189}
   questionLabel: {fileID: 1036947852}
   correct: {fileID: 787194576}
   wrong: {fileID: 594941969}
+  wrongMat: {fileID: 2100000, guid: 1256d3bf72aa10d43a50d7bc289b27a2, type: 2}
+  correctMat: {fileID: 2100000, guid: 27b94efbcc9fb4c47ab715a7a6446289, type: 2}
+  normalMat: {fileID: 2100000, guid: 3904011e674051741903c0cc61f36a5c, type: 2}
+  wrongColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  correctColor: {r: 0, g: 1, b: 0, a: 1}
+  RobotEye: {fileID: 104945031}
+  RobotLight: {fileID: 885468054}
+  RobotBody: {fileID: 1790507431}
 --- !u!1 &151685226
 GameObject:
   m_ObjectHideFlags: 0
@@ -2767,6 +2781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1b80fdf407ffa34999ccae48601e439, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  QuestionManager: {fileID: 798983189}
   X: 0
   questionLabel: {fileID: 1944488736}
   resultBox: {fileID: 142940067}
@@ -2774,6 +2789,16 @@ MonoBehaviour:
   correct: {fileID: 1180469975}
   wrong: {fileID: 1450866928}
   confused: {fileID: 2098744533}
+  wrongMat: {fileID: 2100000, guid: 1256d3bf72aa10d43a50d7bc289b27a2, type: 2}
+  correctMat: {fileID: 2100000, guid: 27b94efbcc9fb4c47ab715a7a6446289, type: 2}
+  confusedMat: {fileID: 2100000, guid: e5c758259fc64fb4c8391203c4cf339d, type: 2}
+  normalMat: {fileID: 2100000, guid: 3904011e674051741903c0cc61f36a5c, type: 2}
+  wrongColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  correctColor: {r: 0, g: 1, b: 0, a: 1}
+  confusedColor: {r: 0, g: 0, b: 1, a: 1}
+  RobotEye: {fileID: 104945031}
+  RobotLight: {fileID: 885468054}
+  RobotBody: {fileID: 1790507431}
 --- !u!114 &274921802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3028,6 +3053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb0df4b64721308448f0b470cf96ffc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  QuestionManager: {fileID: 798983189}
   X: 0
   Y: 0
   questionLabel: {fileID: 655290882}
@@ -3036,6 +3062,16 @@ MonoBehaviour:
   correct: {fileID: 66240618}
   wrong: {fileID: 1994755338}
   confused: {fileID: 1559936895}
+  wrongMat: {fileID: 2100000, guid: 1256d3bf72aa10d43a50d7bc289b27a2, type: 2}
+  correctMat: {fileID: 2100000, guid: 27b94efbcc9fb4c47ab715a7a6446289, type: 2}
+  confusedMat: {fileID: 2100000, guid: e5c758259fc64fb4c8391203c4cf339d, type: 2}
+  normalMat: {fileID: 2100000, guid: 3904011e674051741903c0cc61f36a5c, type: 2}
+  wrongColor: {r: 1, g: 0.9724138, b: 0, a: 1}
+  correctColor: {r: 0, g: 1, b: 0, a: 1}
+  confusedColor: {r: 0, g: 0, b: 1, a: 1}
+  RobotEye: {fileID: 104945031}
+  RobotLight: {fileID: 885468054}
+  RobotBody: {fileID: 1790507431}
 --- !u!114 &292540582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3731,6 +3767,91 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 401580940}
+--- !u!1 &412411421 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1713103163533238, guid: affdec9a3a253284093cb90e54b5d459,
+    type: 2}
+  m_PrefabInternal: {fileID: 1864952036}
+--- !u!82 &412411422
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 412411421}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 86eb4cda7db674142ae663ddd2a99117, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &424422862
 GameObject:
   m_ObjectHideFlags: 0
@@ -4420,7 +4541,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 276.67996, y: 18.399996}
+  m_AnchoredPosition: {x: 276.67996, y: 18.400024}
   m_SizeDelta: {x: 162.45, y: 62.200012}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &523606478
@@ -4913,11 +5034,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b74fcde7301f544c97bc5acf4053eac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  QuestionManager: {fileID: 798983189}
   questionLabel: {fileID: 1583752593}
   resultBox: {fileID: 151685226}
   correct: {fileID: 90239417}
   wrong: {fileID: 1646606511}
   confused: {fileID: 579121851}
+  wrongMat: {fileID: 2100000, guid: 1256d3bf72aa10d43a50d7bc289b27a2, type: 2}
+  correctMat: {fileID: 2100000, guid: 27b94efbcc9fb4c47ab715a7a6446289, type: 2}
+  confusedMat: {fileID: 2100000, guid: e5c758259fc64fb4c8391203c4cf339d, type: 2}
+  normalMat: {fileID: 2100000, guid: 3904011e674051741903c0cc61f36a5c, type: 2}
+  wrongColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  correctColor: {r: 0, g: 1, b: 0, a: 1}
+  confusedColor: {r: 0, g: 0, b: 1, a: 1}
+  RobotEye: {fileID: 104945031}
+  RobotLight: {fileID: 885468054}
+  RobotBody: {fileID: 1790507431}
 --- !u!114 &576205138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5335,7 +5467,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 276.68, y: 18.4}
+  m_AnchoredPosition: {x: 276.68, y: 18.400024}
   m_SizeDelta: {x: 162.45, y: 62.200012}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &614754121
@@ -6494,6 +6626,7 @@ MonoBehaviour:
   - {fileID: 463260518}
   currentText: 0
   currentQuestion: 0
+  ButtonToStart: {fileID: 1433060675}
 --- !u!1 &803887929
 GameObject:
   m_ObjectHideFlags: 0
@@ -7088,6 +7221,7 @@ RectTransform:
   m_Children:
   - {fileID: 1790433244}
   - {fileID: 463260519}
+  - {fileID: 1433060676}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7407,6 +7541,71 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 868687424}
+--- !u!1 &885468054
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 885468055}
+  - component: {fileID: 885468056}
+  m_Layer: 0
+  m_Name: Point light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &885468055
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885468054}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.65281475, y: -0.062235754, z: 0.07371189}
+  m_LocalScale: {x: 4.8717513, y: 5.657838, z: 5.2651577}
+  m_Children: []
+  m_Father: {fileID: 1790507432}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &885468056
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885468054}
+  m_Enabled: 0
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Intensity: 1
+  m_Range: 0.24
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &890219898
 GameObject:
   m_ObjectHideFlags: 0
@@ -9063,11 +9262,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c12748b3488d83f49a3505a121b3fd43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  QuestionManager: {fileID: 798983189}
   questionLabel: {fileID: 283444429}
   resultBox: {fileID: 545710869}
   correct: {fileID: 293152270}
   wrong: {fileID: 59945717}
   confused: {fileID: 56205635}
+  wrongMat: {fileID: 2100000, guid: 1256d3bf72aa10d43a50d7bc289b27a2, type: 2}
+  correctMat: {fileID: 2100000, guid: 27b94efbcc9fb4c47ab715a7a6446289, type: 2}
+  confusedMat: {fileID: 2100000, guid: e5c758259fc64fb4c8391203c4cf339d, type: 2}
+  normalMat: {fileID: 2100000, guid: 3904011e674051741903c0cc61f36a5c, type: 2}
+  wrongColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  correctColor: {r: 0, g: 1, b: 0, a: 1}
+  confusedColor: {r: 0, g: 0, b: 1, a: 1}
+  RobotEye: {fileID: 104945031}
+  RobotLight: {fileID: 885468054}
+  RobotBody: {fileID: 1790507431}
 --- !u!1 &1141955686
 GameObject:
   m_ObjectHideFlags: 0
@@ -9417,11 +9627,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8a51042bc40b2b40875e93def9338aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  QuestionManager: {fileID: 798983189}
   questionLabel: {fileID: 107392892}
   resultBox: {fileID: 1702501829}
   correct: {fileID: 817857662}
   wrong: {fileID: 262226585}
   confused: {fileID: 1073136553}
+  wrongMat: {fileID: 2100000, guid: 1256d3bf72aa10d43a50d7bc289b27a2, type: 2}
+  correctMat: {fileID: 2100000, guid: 27b94efbcc9fb4c47ab715a7a6446289, type: 2}
+  confusedMat: {fileID: 2100000, guid: e5c758259fc64fb4c8391203c4cf339d, type: 2}
+  normalMat: {fileID: 2100000, guid: 3904011e674051741903c0cc61f36a5c, type: 2}
+  wrongColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  correctColor: {r: 0, g: 1, b: 0, a: 1}
+  confusedColor: {r: 0, g: 0, b: 1, a: 1}
+  RobotEye: {fileID: 104945031}
+  RobotLight: {fileID: 885468054}
+  RobotBody: {fileID: 1790507431}
 --- !u!1 &1187781511
 GameObject:
   m_ObjectHideFlags: 0
@@ -10467,7 +10688,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 276.67996, y: 18.399996}
+  m_AnchoredPosition: {x: 276.67996, y: 18.400024}
   m_SizeDelta: {x: 162.45, y: 62.200012}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1326743650
@@ -11170,6 +11391,127 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1423116481}
+--- !u!1 &1433060675
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1433060676}
+  - component: {fileID: 1433060679}
+  - component: {fileID: 1433060678}
+  - component: {fileID: 1433060677}
+  m_Layer: 5
+  m_Name: StartButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1433060676
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1433060675}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 836315118}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1433060677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1433060675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1433060678}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 798983189}
+        m_MethodName: TextChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1433060678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1433060675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1433060679
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1433060675}
 --- !u!1 &1447609327
 GameObject:
   m_ObjectHideFlags: 0
@@ -11642,7 +11984,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 276.68, y: 18.4}
+  m_AnchoredPosition: {x: 276.68, y: 18.400024}
   m_SizeDelta: {x: 162.45, y: 62.200012}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1499511664
@@ -11927,12 +12269,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3511e80654f78b47afd8704cec5edc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  QuestionManager: {fileID: 798983189}
   X: 0
   questionLabel: {fileID: 58987208}
   resultBox: {fileID: 1342738154}
   correct: {fileID: 170175161}
   wrong: {fileID: 1929901182}
   confused: {fileID: 144523510}
+  wrongMat: {fileID: 2100000, guid: 1256d3bf72aa10d43a50d7bc289b27a2, type: 2}
+  correctMat: {fileID: 2100000, guid: 27b94efbcc9fb4c47ab715a7a6446289, type: 2}
+  confusedMat: {fileID: 2100000, guid: e5c758259fc64fb4c8391203c4cf339d, type: 2}
+  normalMat: {fileID: 2100000, guid: 3904011e674051741903c0cc61f36a5c, type: 2}
+  wrongColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  correctColor: {r: 0, g: 1, b: 0, a: 1}
+  confusedColor: {r: 0, g: 0, b: 1, a: 1}
+  RobotEye: {fileID: 104945031}
+  RobotLight: {fileID: 885468054}
+  RobotBody: {fileID: 1790507431}
 --- !u!114 &1556859225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12024,7 +12377,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 276.68, y: 18.4}
+  m_AnchoredPosition: {x: 276.68, y: 18.400024}
   m_SizeDelta: {x: 162.45, y: 62.200012}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1558607536
@@ -12693,11 +13046,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cddc1608dfb8f6448ba9ce80bf58ad96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  QuestionManager: {fileID: 798983189}
   questionLabel: {fileID: 191397187}
   resultBox: {fileID: 931623249}
   correct: {fileID: 251689476}
   wrong: {fileID: 1272060750}
   confused: {fileID: 1756268481}
+  wrongMat: {fileID: 2100000, guid: 1256d3bf72aa10d43a50d7bc289b27a2, type: 2}
+  correctMat: {fileID: 2100000, guid: 27b94efbcc9fb4c47ab715a7a6446289, type: 2}
+  confusedMat: {fileID: 2100000, guid: e5c758259fc64fb4c8391203c4cf339d, type: 2}
+  normalMat: {fileID: 2100000, guid: 3904011e674051741903c0cc61f36a5c, type: 2}
+  wrongColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  correctColor: {r: 0, g: 1, b: 0, a: 1}
+  confusedColor: {r: 0, g: 0, b: 1, a: 1}
+  RobotEye: {fileID: 104945031}
+  RobotLight: {fileID: 885468054}
+  RobotBody: {fileID: 1790507431}
 --- !u!114 &1673083284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13866,6 +14230,33 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1790507431 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1707235795931620, guid: 74c22cd241851e64e90ca5ba3fa984b9,
+    type: 2}
+  m_PrefabInternal: {fileID: 2130904024}
+--- !u!4 &1790507432 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4950522932600742, guid: 74c22cd241851e64e90ca5ba3fa984b9,
+    type: 2}
+  m_PrefabInternal: {fileID: 2130904024}
+--- !u!111 &1790507433
+Animation:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1790507431}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 629ef2e2490bc94449cc408234f6f9a4, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 629ef2e2490bc94449cc408234f6f9a4, type: 2}
+  - {fileID: 7400000, guid: f358f7c0ff0c71d4db2f6ff55efd8523, type: 2}
+  - {fileID: 7400000, guid: 45d94d54fbcda584f80c19dd50c2a48b, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 1
+  m_CullingType: 0
 --- !u!1 &1803373419
 GameObject:
   m_ObjectHideFlags: 0
@@ -14716,11 +15107,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cddbcf3e2051b441b9798abcde5cf91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  QuestionManager: {fileID: 798983189}
   questionLabel: {fileID: 1004775310}
   resultBox: {fileID: 1013062971}
   correct: {fileID: 701497168}
   wrong: {fileID: 424422862}
   confused: {fileID: 860213965}
+  wrongMat: {fileID: 2100000, guid: 1256d3bf72aa10d43a50d7bc289b27a2, type: 2}
+  correctMat: {fileID: 2100000, guid: 27b94efbcc9fb4c47ab715a7a6446289, type: 2}
+  confusedMat: {fileID: 2100000, guid: e5c758259fc64fb4c8391203c4cf339d, type: 2}
+  normalMat: {fileID: 2100000, guid: 3904011e674051741903c0cc61f36a5c, type: 2}
+  wrongColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  correctColor: {r: 0, g: 1, b: 0, a: 1}
+  confusedColor: {r: 0, g: 0, b: 1, a: 1}
+  RobotEye: {fileID: 104945031}
+  RobotLight: {fileID: 885468054}
+  RobotBody: {fileID: 1790507431}
 --- !u!1 &1974025454
 GameObject:
   m_ObjectHideFlags: 0
@@ -14992,7 +15394,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 276.67996, y: 18.399996}
+  m_AnchoredPosition: {x: 276.67996, y: 18.400024}
   m_SizeDelta: {x: 162.45, y: 62.200012}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &2005040967
@@ -15430,6 +15832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa0d27c0d2830834cb7585c1a1a0d4a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  QuestionManager: {fileID: 798983189}
   X: 0
   Y: 0
   questionLabel: {fileID: 1715895010}
@@ -15438,6 +15841,16 @@ MonoBehaviour:
   correct: {fileID: 299520091}
   wrong: {fileID: 1849868001}
   confused: {fileID: 65051694}
+  wrongMat: {fileID: 2100000, guid: 1256d3bf72aa10d43a50d7bc289b27a2, type: 2}
+  correctMat: {fileID: 2100000, guid: 27b94efbcc9fb4c47ab715a7a6446289, type: 2}
+  confusedMat: {fileID: 2100000, guid: e5c758259fc64fb4c8391203c4cf339d, type: 2}
+  normalMat: {fileID: 2100000, guid: 3904011e674051741903c0cc61f36a5c, type: 2}
+  wrongColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  correctColor: {r: 0, g: 1, b: 0, a: 1}
+  confusedColor: {r: 0, g: 0, b: 1, a: 1}
+  RobotEye: {fileID: 104945031}
+  RobotLight: {fileID: 885468054}
+  RobotBody: {fileID: 1790507431}
 --- !u!114 &2078925507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16030,6 +16443,118 @@ Prefab:
     - target: {fileID: 4493605374885720, guid: 74c22cd241851e64e90ca5ba3fa984b9, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4950522932600742, guid: 74c22cd241851e64e90ca5ba3fa984b9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.009051442
+      objectReference: {fileID: 0}
+    - target: {fileID: 4950522932600742, guid: 74c22cd241851e64e90ca5ba3fa984b9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.1477342
+      objectReference: {fileID: 0}
+    - target: {fileID: 4950522932600742, guid: 74c22cd241851e64e90ca5ba3fa984b9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.0077666193
+      objectReference: {fileID: 0}
+    - target: {fileID: 4950522932600742, guid: 74c22cd241851e64e90ca5ba3fa984b9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4950522932600742, guid: 74c22cd241851e64e90ca5ba3fa984b9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4950522932600742, guid: 74c22cd241851e64e90ca5ba3fa984b9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4950522932600742, guid: 74c22cd241851e64e90ca5ba3fa984b9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4950522932600742, guid: 74c22cd241851e64e90ca5ba3fa984b9, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4950522932600742, guid: 74c22cd241851e64e90ca5ba3fa984b9, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4950522932600742, guid: 74c22cd241851e64e90ca5ba3fa984b9, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4292531860391220, guid: 74c22cd241851e64e90ca5ba3fa984b9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4292531860391220, guid: 74c22cd241851e64e90ca5ba3fa984b9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4292531860391220, guid: 74c22cd241851e64e90ca5ba3fa984b9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4292531860391220, guid: 74c22cd241851e64e90ca5ba3fa984b9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: 4292531860391220, guid: 74c22cd241851e64e90ca5ba3fa984b9, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4292531860391220, guid: 74c22cd241851e64e90ca5ba3fa984b9, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4292531860391220, guid: 74c22cd241851e64e90ca5ba3fa984b9, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4292531860391220, guid: 74c22cd241851e64e90ca5ba3fa984b9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.030471055
+      objectReference: {fileID: 0}
+    - target: {fileID: 4292531860391220, guid: 74c22cd241851e64e90ca5ba3fa984b9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.90710557
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566513199693968, guid: 74c22cd241851e64e90ca5ba3fa984b9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071069
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566513199693968, guid: 74c22cd241851e64e90ca5ba3fa984b9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0.00000030898792
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566513199693968, guid: 74c22cd241851e64e90ca5ba3fa984b9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566513199693968, guid: 74c22cd241851e64e90ca5ba3fa984b9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: -0.00000033510142
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566513199693968, guid: 74c22cd241851e64e90ca5ba3fa984b9, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566513199693968, guid: 74c22cd241851e64e90ca5ba3fa984b9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.07052897
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566513199693968, guid: 74c22cd241851e64e90ca5ba3fa984b9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.97320276
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566513199693968, guid: 74c22cd241851e64e90ca5ba3fa984b9, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566513199693968, guid: 74c22cd241851e64e90ca5ba3fa984b9, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 179.99998
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 74c22cd241851e64e90ca5ba3fa984b9, type: 2}

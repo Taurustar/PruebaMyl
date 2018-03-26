@@ -51,10 +51,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CommentsScript.cs" />
-     <Compile Include="Assets\GeoScript.cs" />
-     <Compile Include="Assets\MapScript.cs" />
-     <Compile Include="Assets\PostScript.cs" />
      <Compile Include="Assets\Scripts\MenuPrincipal.cs" />
      <Compile Include="Assets\Scripts\Scene1Scripts\Question1.cs" />
      <Compile Include="Assets\Scripts\Scene1Scripts\Question10.cs" />
@@ -67,7 +63,11 @@
      <Compile Include="Assets\Scripts\Scene1Scripts\Question8.cs" />
      <Compile Include="Assets\Scripts\Scene1Scripts\Question9.cs" />
      <Compile Include="Assets\Scripts\Scene1Scripts\RandomQuestion.cs" />
-     <Compile Include="Assets\Scripts\SceneAsyncLoader.cs" />
+     <Compile Include="Assets\Scripts\Scene2 Scrpits\VehicleSwapper.cs" />
+     <Compile Include="Assets\Scripts\Scene3 Scripts\CommentsScript.cs" />
+     <Compile Include="Assets\Scripts\Scene3 Scripts\GeoScript.cs" />
+     <Compile Include="Assets\Scripts\Scene3 Scripts\MapScript.cs" />
+     <Compile Include="Assets\Scripts\Scene3 Scripts\PostScript.cs" />
      <Compile Include="Assets\TestLevel\scripts\breakablelight.cs" />
      <Compile Include="Assets\TestLevel\scripts\crate.cs" />
      <Compile Include="Assets\TestLevel\scripts\explosionForce.cs" />
@@ -76,7 +76,6 @@
      <Compile Include="Assets\TestLevel\scripts\Lightflicker.cs" />
      <Compile Include="Assets\TestLevel\scripts\playrandomsound.cs" />
      <Compile Include="Assets\TestLevel\scripts\waitAndDestroy.cs" />
-     <Compile Include="Assets\VehicleSwapper.cs" />
      <None Include="Assets\skyshader1.0\mysky.shader" />
      <None Include="Assets\TestLevel\environment\customTrees\Materials\TreeCreatorLeavesFastOptimized.shader" />
      <None Include="Assets\TestLevel\shaders\snowTop.shader" />

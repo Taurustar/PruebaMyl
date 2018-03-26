@@ -4,25 +4,11 @@ using UnityEngine;
 
 public class MenuPrincipal : MonoBehaviour {
 
-    public static MenuPrincipal instance;
+    
     public GameObject canvasCargar;
     public GameObject loadSceneBar;
-
-    void awake()
-    {
-        if(!instance)
-        {
-            instance = this;
-        }
-
-        if(this != instance)
-        {
-            Destroy(this);
-        }
-
-        DontDestroyOnLoad(instance);
-    }
-
+    bool isloading = false;
+    AsyncOperation asyncOp;
 	// Use this for initialization
 	void Start () {
 
@@ -30,30 +16,27 @@ public class MenuPrincipal : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
-	}
-
-    public void ShowLoadBar(int levelToGo)
+    void Update()
     {
-        canvasCargar.GetComponent<Canvas>().enabled = true;
-        StartCoroutine(FillTheBar(levelToGo));
+        if(isloading)
+        loadSceneBar.GetComponent<RectTransform>().localScale.Set(asyncOp.progress,1,1);
     }
 
-    IEnumerator FillTheBar(int levelToGo)
+    public void ShowLoadBar(int index)
     {
-        yield return new WaitForSeconds(1);
-        loadSceneBar.GetComponent<UnityEngine.UI.Image>().transform.localScale.Set(20,1,1);
-        yield return new WaitForSeconds(1);
-        loadSceneBar.GetComponent<UnityEngine.UI.Image>().transform.localScale.Set(40, 1, 1);
-        yield return new WaitForSeconds(1);
-        loadSceneBar.GetComponent<UnityEngine.UI.Image>().transform.localScale.Set(60, 1, 1);
-        yield return new WaitForSeconds(1);
-        loadSceneBar.GetComponent<UnityEngine.UI.Image>().transform.localScale.Set(80, 1, 1);
-        yield return new WaitForSeconds(1);
-        loadSceneBar.GetComponent<UnityEngine.UI.Image>().transform.localScale.Set(100, 1, 1);
-        yield return new WaitForSeconds(1);
-        UnityEngine.SceneManagement.SceneManager.SetActiveScene(UnityEngine.SceneManagement.SceneManager.GetSceneByBuildIndex(levelToGo));
+        canvasCargar.GetComponent<Canvas>().enabled = true;
+        
+        StartCoroutine(FillTheBar(index));
+    }
+
+    IEnumerator FillTheBar(int index)
+    {
+        asyncOp = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(index);
+        isloading = true;
+        while (!asyncOp.isDone)
+        {
+            yield return null;
+        }
     }
 
 
