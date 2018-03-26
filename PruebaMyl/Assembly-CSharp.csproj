@@ -54,6 +54,7 @@
      <Compile Include="Assets\CommentsScript.cs" />
      <Compile Include="Assets\GeoScript.cs" />
      <Compile Include="Assets\MapScript.cs" />
+     <Compile Include="Assets\PostScript.cs" />
      <Compile Include="Assets\Scripts\MenuPrincipal.cs" />
      <Compile Include="Assets\Scripts\Scene1Scripts\Question1.cs" />
      <Compile Include="Assets\Scripts\Scene1Scripts\Question10.cs" />

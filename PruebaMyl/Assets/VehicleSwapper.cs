@@ -90,6 +90,21 @@ public class VehicleSwapper : MonoBehaviour {
         {
             RenderSettings.fog = false;
         }
+
+        if(sunIndex == 0)
+        {
+            foreach(GameObject go in GameObject.FindGameObjectsWithTag("Lights"))
+            {
+                go.GetComponent<Light>().enabled = false;
+            }
+        }
+        else
+        {
+            foreach (GameObject go in GameObject.FindGameObjectsWithTag("Lights"))
+            {
+                go.GetComponent<Light>().enabled = true;
+            }
+        }
         RenderSettings.sun = sunLights[sunIndex].GetComponent<Light>();
     }
     
