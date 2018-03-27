@@ -4,22 +4,40 @@ using UnityEngine;
 
 public class MenuPrincipal : MonoBehaviour {
 
-    
+    public static MenuPrincipal instance;
     public GameObject canvasCargar;
     public GameObject loadSceneBar;
     bool isloading = false;
     AsyncOperation asyncOp;
 	// Use this for initialization
+
+    void Awake()
+    {
+
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        DontDestroyOnLoad(instance);
+
+    }
+
 	void Start () {
 
 		
 	}
 	
+    
 	// Update is called once per frame
     void Update()
     {
         if(isloading)
-        loadSceneBar.GetComponent<RectTransform>().localScale.Set(asyncOp.progress,1,1);
+        loadSceneBar.GetComponent<RectTransform>().localScale.Set(asyncOp.progress * 100 ,1,1);
     }
 
     public void ShowLoadBar(int index)

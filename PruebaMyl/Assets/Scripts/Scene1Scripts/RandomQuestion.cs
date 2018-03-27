@@ -16,6 +16,7 @@ public class RandomQuestion : MonoBehaviour {
 
     void Start()
     {
+        MenuPrincipal.instance.gameObject.GetComponent<Canvas>().enabled = false;
         currentQuestion = Random.Range(0, Questions.Length - 1);
         currentText = 0;
         texts[currentText].SetActive(true);

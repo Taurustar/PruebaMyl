@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\HideMainMenu.cs" />
      <Compile Include="Assets\Scripts\MenuPrincipal.cs" />
      <Compile Include="Assets\Scripts\Scene1Scripts\Question1.cs" />
      <Compile Include="Assets\Scripts\Scene1Scripts\Question10.cs" />
@@ -68,6 +69,7 @@
      <Compile Include="Assets\Scripts\Scene3 Scripts\GeoScript.cs" />
      <Compile Include="Assets\Scripts\Scene3 Scripts\MapScript.cs" />
      <Compile Include="Assets\Scripts\Scene3 Scripts\PostScript.cs" />
+     <Compile Include="Assets\Scripts\Scene4 Scripts\MyLCard.cs" />
      <Compile Include="Assets\TestLevel\scripts\breakablelight.cs" />
      <Compile Include="Assets\TestLevel\scripts\crate.cs" />
      <Compile Include="Assets\TestLevel\scripts\explosionForce.cs" />

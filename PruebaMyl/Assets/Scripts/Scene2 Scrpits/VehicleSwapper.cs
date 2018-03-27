@@ -13,6 +13,7 @@ public class VehicleSwapper : MonoBehaviour {
 
     void Start()
     {
+        MenuPrincipal.instance.gameObject.GetComponent<Canvas>().enabled = false;
         vehicles[vehicleIndex].SetActive(true);
         sunLights[sunIndex].SetActive(true);
         RenderSettings.skybox = skyMaterials[sunIndex];
